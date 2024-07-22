@@ -1,0 +1,14 @@
+--cpu Cortex-M3
+"ll_code\startup_stm32f103xb.o"
+"ll_code\main.o"
+"ll_code\stm32f1xx_it.o"
+"ll_code\stm32f1xx_ll_gpio.o"
+"ll_code\stm32f1xx_ll_pwr.o"
+"ll_code\stm32f1xx_ll_exti.o"
+"ll_code\stm32f1xx_ll_rcc.o"
+"ll_code\stm32f1xx_ll_utils.o"
+"ll_code\system_stm32f1xx.o"
+--strict --scatter "LL_code\LL_code.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "LL_code.map" -o LL_code\LL_code.axf
